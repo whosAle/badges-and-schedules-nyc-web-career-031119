@@ -9,7 +9,7 @@ def batch_badge_creator(ary)
 end
 
 def assign_rooms(speakers)
-  speakers.map_with_index { |name, i| "Hello #{name}! You'll be assigned to room #{i}"  }
+  speakers.enum_with_index.map { |name, i| "Hello #{name}! You'll be assigned to room #{i}"  }
 end
 
 def printer(speakers)
